@@ -1,5 +1,4 @@
-.idea/
-.idea/*
+.idea
 LibraryFlow.iml
 src/
-lib/
+out/
