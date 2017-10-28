@@ -6,6 +6,9 @@
 
     <groupId>ru.javabegin.training.springlibrary</groupId>
     <artifactId>LibraryFlow</artifactId>
+<!--
+    <packaging>war</packaging>
+-->
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -152,6 +155,7 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysqlconnector-version}</version>
         </dependency>
+
 
 
     </dependencies>
