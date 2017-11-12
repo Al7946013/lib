@@ -1,5 +1,6 @@
 package ru.javabegin.training.springlibrary.entities;
 
+
 public class Vote {
     private long id;
     private Integer value;
