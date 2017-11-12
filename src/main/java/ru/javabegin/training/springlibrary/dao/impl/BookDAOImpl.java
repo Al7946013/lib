@@ -2,7 +2,6 @@ package ru.javabegin.training.springlibrary.dao.impl;
 
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.CriteriaSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,18 +18,15 @@ public class BookDAOImpl implements BookDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
-    private List<Book> books;
-
 
     @Transactional
 //    @Override
     public List<Book> getBooks() {
-
-        books = (List<Book>) sessionFactory.getCurrentSession()
+        List<Book> bookList =  sessionFactory.getCurrentSession()
                 .createCriteria(Book.class)
-                .setResultTransformer(CriteriaSpecification.DISTINCT_ROOT_ENTITY).list();
+                .setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
 
-        return books;
+        return bookList;
     }
 
 //    @Override
